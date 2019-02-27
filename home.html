@@ -1,17 +1,95 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="create">
+<html lang="en" dir="ltr" class="add-preferences">
 
 <head>
   <meta charset="utf-8">
   <title>Home</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<div class="create-heading">
-		<h1>Home</h1>
+
+	<div class="home-heading">
+		<h1 id="title">Home</h1>
 		<p>Search, Select, and Deliver!<br>Or check your suggested markets.</p>
 	</div>
+
+	<form class="search-bar">
+		<input type="text" placeholder="Search.." name="search">
+		<button type="submit"><i id="search-icon" class="material-icons">search</i></button>
+	</form>
+
+	<div class="home-body">
+		<h3><u>Suggested Foods</u></h3>
+
+		<div class="clearfix">
+  			<div class="preference">
+          		<div class="icon">
+            		<img src="images/preferences/chicken.png" alt="chicken">
+          		</div>
+          		<div class="form-check form-check-inline preference-check">
+           			<input class="form-check-input" type="checkbox" id="chicken" value="chicken">
+            		<label class="form-check-label" for="chicken">chicken</label>
+          		</div>
+        	</div>
+  			<div class="preference">
+          		<div class="icon">
+            		<img src="images/preferences/egg.png" alt="egg">
+          		</div>
+          		<div class="form-check form-check-inline preference-check">
+            		<input class="form-check-input" type="checkbox" id="egg" value="egg">
+            		<label class="form-check-label" for="egg">egg</label>
+          		</div>
+        	</div>
+  			<div class="preference">
+          		<div class="icon">
+            		<img src="images/preferences/cheese.png" alt="cheese">
+          		</div>
+          		<div class="form-check form-check-inline preference-check">
+            		<input class="form-check-input" type="checkbox" id="cheese" value="cheese">
+            		<label class="form-check-label" for="cheese">cheese</label>
+          		</div>
+        	</div>
+  			<div class="preference">
+         	 	<div class="icon">
+            		<img src="images/preferences/orange.png" alt="orange">
+          		</div>
+          		<div class="form-check form-check-inline preference-check">
+            		<input class="form-check-input" type="checkbox" id="orange" value="orange">
+            		<label class="form-check-label" for="orange">orange</label>
+          		</div>
+        	</div>
+		</div>
+
+		<div class="info">
+			<p><button class="learn-more">Learn More</button>AND check out our first batch of ORANGES at Evanston Farmer's Market!</p>
+		</div>
+
+		<div>
+			<h3><u>Suggested Markets</u></h3>
+		</div>
+
+		<div>
+			<h3><u>Order Again:</u></h3>
+		</div>	
+	</div>
+
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Local Script -->
+  <script src="main.js" charset="utf-8"></script>
+  <!-- Bootstrap 4.1 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
 </body>
+</html>
