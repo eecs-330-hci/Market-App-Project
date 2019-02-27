@@ -109,7 +109,7 @@ h1 {
   margin: auto;
 
 }
-.preferences-row {
+.preferences-row, .clearfix {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -140,7 +140,7 @@ h1 {
 /*Home Page*/
 .home-heading {
   text-align: left;
-  margin-left: 20px;
+  margin-left: 10px;
   padding: 20px;
   font-size: 18px;
 }
@@ -186,7 +186,7 @@ form.search-bar button:hover {
 
 .home-body {
   text-align: left;
-  margin-left: 20px;
+  margin-left: 10px;
   padding: 20px;
   font-size: 18px;
 }
@@ -195,11 +195,16 @@ form.search-bar button:hover {
   margin-top: 25px;
 }
 
-.box {
+.item {
   float: left;
-  width: 22.5%;
+  width: 25%;
   padding: 10px;
-  margin: 10px;
+}
+
+.icon-text {
+  padding: 10px;
+  margin-bottom: 6px;
+  text-align: center;
 }
 
 .icon img {
