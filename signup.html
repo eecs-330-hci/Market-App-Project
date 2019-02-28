@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="home">
+<html lang="en" dir="ltr" class="create">
 
 <head>
   <meta charset="utf-8">
-  <title>Home</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-  <div class="logo-heading">
-    <h1>Harvest</h1>
+  <div class="create-heading">
+    <h1>Sign Up</h1>
   </div>
-  <div class="home-options">
-    <form>
-      <div class="signup-wrapper">
-        <a class="signup btn btn-outline-dark" role="button" href="signup.html">Sign Up</a>
-      </div>
-      <div class="login-wrapper">
-        <a class="login btn btn-dark" role="button" href="#">Log In</a>
-      </div>
+  <div class="signup-form">
+    <form class="form-signup">
+      <input type="text" name="firstName" class="form-control" placeholder="First name" required>
+      <input type="text" name="lastName" class="form-control" placeholder="Last name" required>
+      <input type="telephone" name="phoneNumber" class="form-control" placeholder="Phone Number" required>
+      <input type="email" name="inputEmail" class="form-control" placeholder="Email address" required>
+      <input type="password" name="inputPassword" class="form-control" placeholder="Password" required>
+      <a class="btn btn-primary btn-block home-button" href="preferences.html" type="submit" role="button" name="continue">Continue</a>
+      <hr>
     </form>
+    <div class="user-note">
+      <p><strong>NOTE: </strong> Your user name will be your <strong>email address.</strong></p>
+    </div>
   </div>
 
   <!-- jQuery -->
