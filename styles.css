@@ -104,19 +104,82 @@ h1 {
 }
 
 /* Preferences page */
-.preferences-wrapper {
+.profile-image {
+  margin-top: 7px;
+  width: 90%;
+}
+
+
+.profile-info-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.profile-info-div {
+
+}
+
+.profile-info-text {
+  margin-bottom: 6%;
+}
+
+.profile-featured-farmers {
+  margin-bottom: 1rem;
+}
+
+.profile-reviews {
+  margin-top: 4%;
+}
+
+.profile-address p{
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.profile-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-inline-div button {
+}
+
+.profile-button {
+  padding-bottom: 15px;
+}
+
+.profile-button button {
+  width: 100%;
+}
+
+.profile-information hr {
+  margin-top: 0px;
+}
+
+#filled-star {
+  color: gold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#empty-star {
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
+
+.preferences-wrapper, .profile-wrapper {
   width: 80vw;
   margin: auto;
 
 }
-.preferences-row {
+.preferences-row, .profile-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 5%;
 }
 
-.preferences-heading {
+.preferences-heading, .profile-heading {
   margin: 8% 0 5%;
 }
 

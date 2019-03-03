@@ -42,3 +42,5 @@ $(".finish button").click(function() {
 
 //adds the user's first name to the preferences page
 $(".preferences-heading h1").html("Add Your Preferences", localStorage.getItem('firstName'));
+
+$(".profile-image").height($(".profile-information").height() - 32);
