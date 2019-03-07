@@ -205,7 +205,6 @@ h1 {
 #title{
   font-size: 4rem;
 }
-
 .home-body {
   text-align: left;
   /* margin-left: 20px;
@@ -262,7 +261,6 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 5%;
-
 }
 
 .suggested-market{
@@ -276,7 +274,6 @@ h1 {
   height: auto;
   /* padding-right: 30px */
   border: 1px solid rgba(0, 0, 0, 0.2);
-
 }
 
 .caption {
@@ -339,3 +336,4 @@ h1 {
 .search-order {
   margin-top: 5%;
 }
+
