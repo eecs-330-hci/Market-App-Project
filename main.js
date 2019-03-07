@@ -1,44 +1,112 @@
-const basicInfo = {};
-const cardInfo = {};
-const preferences = {};
+    var availableTags = [
+      "apple",
+      "banana",
+      "beans",
+      "beef",
+      "broccoli",
+      "carrot",
+      "cheese",
+      "chicken",
+      "egg",
+      "grapes",
+      "ice-cream",
+      "lettuce",
+      "milk",
+      "onion",
+      "orange",
+      "potato",
+      "strawberry",
+      "turkey",
+      "yogurt",
+    ];
+    $(".searchbar").autocomplete({
+      source: availableTags
+    });
 
-//prevents the user to toggle signup and login at the same time
-$(".signup").click(function() {
-  $(".login").attr('disabled', function(_, attr) {
-    return !attr;
-  });
-});
+    $('#beef').click(function() {
+      if ($(this).prop("checked") == true) {
+        addCheckoutLI("Beef", "$3.99/lb", "Arrives plastic wrapped.");
+      } else if ($(this).prop("checked") == false) {
+        removeCheckoutLI("Beef");
+      }
+    });
+    $('#apple').click(function() {
+      if ($(this).prop("checked") == true) {
+        addCheckoutLI("Apple", "$3.99/lb", "Arrives boxed.");
+      } else if ($(this).prop("checked") == false) {
+        removeCheckoutLI("Apple");
+      }
+    });
+    $('#grapes').click(function() {
+      if ($(this).prop("checked") == true) {
+        addCheckoutLI("Grapes", "$3.99/lb", "Arrives bagged and sealed.");
+      } else if ($(this).prop("checked") == false) {
+        removeCheckoutLI("Grapes");
+      }
+    });
+    $('#cheese').click(function() {
+      if ($(this).prop("checked") == true) {
+        addCheckoutLI("Cheese", "$3.99/lb", "Arrives boxed.");
+      } else if ($(this).prop("checked") == false) {
+        removeCheckoutLI("Cheese");
+      }
+    });
 
-$(".login").click(function() {
-  $(".signup").attr('disabled', function(_, attr) {
-    return !attr;
-  });
-});
+function createCheckoutH(foodItem) {
+  let h6 = $("<h6>", {
+    "class": "my-0",
+  }).html(foodItem);
 
-//no back-end required for p6, so form data will be stored in a local array instead
-//of a js object
+  return h6;
+}
 
-//basic info from home page
-$(".home-button").click(function() {
-  for (var i = 0; i < $(".form-signup input").length; i++){
-    basicInfo.push($(".form-signup input")[i].value);
-  }
-  localStorage.setItem('firstName', basicInfo[0]);
-});
+function createSpan(price) {
+  let span = $("<span>", {
+    "class": "text-muted",
+  }).html(price);
+  return span;
+}
 
-//credit card info
-$("credit-submit").click(function() {
-  for (var i = 0; i < $(".card-number-info input").length; i++){
-    cardInfo.push($(".card-number-info input")[i].value);
-  }
-});
+function createSmall(description) {
+  let small = $("<small>", {
+    "class": "text-muted",
+  }).html(description);
+  return small;
+}
 
-//preferences info
-$(".finish button").click(function() {
-  for (var i = 0; i < $("input").length; i++){
-    preferences.push($("input")[i].value);
-  }
-});
+function createCheckoutDiv(h6, small) {
+  let div = $("<div>").html(h6).append(small);
 
-//adds the user's first name to the preferences page
-$(".preferences-heading h1").html("Add Your Preferences", localStorage.getItem('firstName'));
+  return div;
+}
+
+function createCheckoutLI(div, span, foodItem) {
+  let li = $("<li>", {
+    "class": "list-group-item d-flex justify-content-between lh-condensed " + foodItem,
+  }).html(div).append(span);
+  return li;
+}
+
+function addCheckoutLI(foodItem, price, description) {
+  let h6 = createCheckoutH(foodItem);
+  let span = createSpan(price);
+  let small = createSmall(description);
+  let div = createCheckoutDiv(h6, small);
+  let li = createCheckoutLI(div, span, foodItem);
+
+  $(".list-group li").last().before(li);
+  let currentTotal = $(".total").text();
+  let newTotal = parseInt(currentTotal) + 3.99;
+  $(".total").text(newTotal);
+}
+
+function removeCheckoutLI(foodItem) {
+  $("." + foodItem).remove();
+  let currentTotal = $(".total").text();
+  let newTotal = parseInt(currentTotal) - 3.99;
+  $(".total").text(newTotal);
+}
+
+function showOrder() {
+  alert("Your order has been processed!");
+}
